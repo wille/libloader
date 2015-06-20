@@ -3,9 +3,6 @@ package libloader;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.redpois0n.oslib.Arch;
-import com.redpois0n.oslib.OperatingSystem;
-
 public class GlobalLibraries {
 	
 	private static final List<Library> LIBRARIES = new ArrayList<Library>();
@@ -14,13 +11,10 @@ public class GlobalLibraries {
 		LIBRARIES.add(lib);
 	}
 	
-	public static void loadLibraries() {
-		OperatingSystem type = OperatingSystem.getOperatingSystem().getType();
-		Arch architecture = Arch.getArch();
-		
+	public static void loadLibraries() {		
 		for (Library lib : LIBRARIES) {
-			if (lib.getOperatingSystem() == type && lib.getArchitecture() == architecture) {
-				
+			if (lib.isLoadable()) {
+				lib.load();
 			}
 		}
 	}

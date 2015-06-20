@@ -27,7 +27,7 @@ public abstract class Library {
 	}
 	
 	@Override
-	public boolean equals(Object o) {
+	public final boolean equals(Object o) {
 		if (o instanceof Library) {
 			Library lib = (Library) o;
 			
@@ -35,5 +35,16 @@ public abstract class Library {
 		}
 		
 		return this == o;
+	}
+	
+	/**
+	 * If this library is loadable on this operating system and architecture
+	 * @return
+	 */
+	public final boolean isLoadable() {
+		OperatingSystem type = OperatingSystem.getOperatingSystem().getType();
+		Arch architecture = Arch.getArch();
+		
+		return this.type == type && this.architecture == architecture;
 	}
 }
