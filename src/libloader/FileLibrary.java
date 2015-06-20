@@ -11,7 +11,7 @@ import com.redpois0n.oslib.OperatingSystem;
 public class FileLibrary extends Library {
 	
 	public FileLibrary(String file, OperatingSystem type, Arch architecture) {
-		super(file, type, architecture);
+		this(new File(file), type, architecture);
 	}
 		
 	public FileLibrary(File file, OperatingSystem type, Arch architecture) {
