@@ -14,7 +14,11 @@ public class GlobalLibraries {
 	public static void loadLibraries() {		
 		for (Library lib : LIBRARIES) {
 			if (lib.isLoadable()) {
-				lib.load();
+				try {
+					lib.load();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
 		}
 	}
