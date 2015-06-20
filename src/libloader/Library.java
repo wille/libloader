@@ -18,6 +18,14 @@ public abstract class Library {
 	
 	public abstract void load();
 	
+	public OperatingSystem getOperatingSystem() {
+		return this.type;
+	}
+	
+	public Arch getArchitecture() {
+		return this.architecture;
+	}
+	
 	@Override
 	public boolean equals(Object o) {
 		if (o instanceof Library) {
