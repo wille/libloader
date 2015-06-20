@@ -19,7 +19,7 @@ public class FileLibrary extends Library {
 	}
 
 	@Override
-	public void load() {
+	public void load() throws Exception {
 		System.load(path);
 	}
 

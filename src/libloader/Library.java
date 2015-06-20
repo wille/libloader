@@ -16,7 +16,7 @@ public abstract class Library {
 		this.architecture = architecture;
 	}
 	
-	public abstract void load();
+	public abstract void load() throws Exception;
 	
 	public OperatingSystem getOperatingSystem() {
 		return this.type;
