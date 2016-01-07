@@ -21,6 +21,7 @@ public class ResourceLibrary extends Library {
 	 */
 	@Override
 	public void load() throws Exception {
+		System.out.println("Loading " + path);
 		InputStream in = ResourceLibrary.class.getResourceAsStream(path);
 		
 		String name = path;

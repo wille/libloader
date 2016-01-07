@@ -7,6 +7,8 @@ public abstract class Library {
 
 	protected String path;
 	
+	private boolean loaded;
+	
 	private OperatingSystem type;
 	private Arch architecture;
 	
@@ -46,5 +48,13 @@ public abstract class Library {
 		Arch architecture = Arch.getArch();
 		
 		return this.type == type && this.architecture == architecture;
+	}
+	
+	public final boolean isLoaded() {
+		return this.loaded;
+	}
+	
+	public final void setLoaded(boolean b) {
+		this.loaded = b;
 	}
 }

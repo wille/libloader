@@ -13,11 +13,13 @@ public class GlobalLibraries {
 	
 	public static void loadLibraries() {		
 		for (Library lib : LIBRARIES) {
-			if (lib.isLoadable()) {
+			if (lib.isLoadable() && !lib.isLoaded()) {
 				try {
 					lib.load();
+					lib.setLoaded(true);
 				} catch (Exception e) {
 					e.printStackTrace();
+					LIBRARIES.remove(lib);
 				}
 			}
 		}
