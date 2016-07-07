@@ -4,8 +4,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 
-import com.redpois0n.oslib.Arch;
-import com.redpois0n.oslib.OperatingSystem;
+import oslib.Arch;
+import oslib.OperatingSystem;
 
 /**
  * Load library from resource

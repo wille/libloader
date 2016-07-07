@@ -1,7 +1,7 @@
 package libloader;
 
-import com.redpois0n.oslib.Arch;
-import com.redpois0n.oslib.OperatingSystem;
+import oslib.Arch;
+import oslib.OperatingSystem;
 
 public abstract class Library {
 

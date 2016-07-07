@@ -2,8 +2,8 @@ package libloader;
 
 import java.io.File;
 
-import com.redpois0n.oslib.Arch;
-import com.redpois0n.oslib.OperatingSystem;
+import oslib.Arch;
+import oslib.OperatingSystem;
 
 /**
  * Load library from {@link java.io#File} path
