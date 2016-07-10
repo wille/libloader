@@ -19,7 +19,6 @@ public class GlobalLibraries {
 					lib.setLoaded(true);
 				} catch (Exception e) {
 					e.printStackTrace();
-					LIBRARIES.remove(lib);
 				}
 			}
 		}
